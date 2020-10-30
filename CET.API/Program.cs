@@ -6,7 +6,7 @@ namespace CET.API
   {
     static void Main(string[] args)
     {
-      Console.WriteLine("I.. I'm alive");
+      Server.Start();
     }
   }
 }
