@@ -11,7 +11,7 @@ ws.addEventListener("message", (e) => {
 
   switch (msg.operation) {
     case 2:
-      console.log(msg.video.thumb);
+      document.getElementById("thumbnail").src = msg.video.thumb;
       break;
   }
 });
