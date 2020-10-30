@@ -2,6 +2,16 @@ var ws = new WebSocket("ws://127.0.0.1:8099/");
 
 ws.addEventListener("open", () => {
   ws.send(JSON.stringify({
-    hello: true
+    operation: 1
   }));
+});
+
+ws.addEventListener("message", (e) => {
+  var msg = JSON.parse(e.data);
+
+  switch (msg.operation) {
+    case 2:
+      console.log(msg.video.thumb);
+      break;
+  }
 });
